@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./styles/Loading.css";
 import { useLoading } from "../context/LoadingProvider";
-
 import Marquee from "react-fast-marquee";
 
 const Loading = ({ percent }: { percent: number }) => {
@@ -10,28 +9,57 @@ const Loading = ({ percent }: { percent: number }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
 
-  if (percent >= 100) {
-    setTimeout(() => {
+  // Failsafe: guarantee user always enters the site within 3.5s max, even if WebGL/assets fail
+  useEffect(() => {
+    const failsafe = setTimeout(() => {
       setLoaded(true);
       setTimeout(() => {
         setIsLoaded(true);
-      }, 1000);
-    }, 600);
-  }
+      }, 500);
+    }, 3500);
+
+    return () => clearTimeout(failsafe);
+  }, []);
 
   useEffect(() => {
-    import("./utils/initialFX").then((module) => {
-      if (isLoaded) {
-        setClicked(true);
-        setTimeout(() => {
-          if (module.initialFX) {
-            module.initialFX();
-          }
-          setIsLoading(false);
-        }, 900);
-      }
-    });
-  }, [isLoaded]);
+    if (percent >= 100) {
+      const t1 = setTimeout(() => {
+        setLoaded(true);
+        const t2 = setTimeout(() => {
+          setIsLoaded(true);
+        }, 800);
+        return () => clearTimeout(t2);
+      }, 400);
+      return () => clearTimeout(t1);
+    }
+  }, [percent]);
+
+  useEffect(() => {
+    if (isLoaded) {
+      setClicked(true);
+      const timer = setTimeout(() => {
+        import("./utils/initialFX")
+          .then((module) => {
+            try {
+              if (module.initialFX) {
+                module.initialFX();
+              }
+            } catch (err) {
+              console.warn("initialFX error:", err);
+            } finally {
+              document.body.style.overflowY = "auto";
+              setIsLoading(false);
+            }
+          })
+          .catch((err) => {
+            console.warn("initialFX import error:", err);
+            document.body.style.overflowY = "auto";
+            setIsLoading(false);
+          });
+      }, 700);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoaded, setIsLoading]);
 
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
     const { currentTarget: target } = e;
@@ -46,7 +74,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          Logo
+          AP
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -62,8 +90,8 @@ const Loading = ({ percent }: { percent: number }) => {
       <div className="loading-screen">
         <div className="loading-marquee">
           <Marquee>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
+            <span> Strategy & Operations</span> <span>Investment Analysis</span>
+            <span> Business Growth</span> <span>Digital Transformation</span>
           </Marquee>
         </div>
         <div
@@ -75,7 +103,7 @@ const Loading = ({ percent }: { percent: number }) => {
             <div className="loading-container">
               <div className="loading-content">
                 <div className="loading-content-in">
-                  Loading <span>{percent}%</span>
+                  Loading <span>{Math.min(100, Math.max(0, percent))}%</span>
                 </div>
               </div>
               <div className="loading-box"></div>

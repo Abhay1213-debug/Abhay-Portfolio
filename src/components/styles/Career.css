@@ -29,6 +29,42 @@
   font-family: "Geist", sans-serif;
   font-weight: 300;
 }
+.career-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 5;
+  flex-wrap: wrap;
+}
+
+.career-tab-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(194, 164, 255, 0.2);
+  color: #ccc;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.career-tab-btn:hover {
+  background: rgba(194, 164, 255, 0.12);
+  border-color: rgba(194, 164, 255, 0.5);
+  color: #fff;
+}
+
+.career-tab-btn.active {
+  background: linear-gradient(135deg, rgba(127, 64, 255, 0.4), rgba(194, 164, 255, 0.2));
+  border-color: var(--accentColor);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(170, 66, 255, 0.3);
+}
+
 .career-info {
   position: relative;
   display: flex;
@@ -40,12 +76,40 @@
   justify-content: space-between;
   margin-bottom: 50px;
 }
-.career-info-box p {
+.career-info-box p,
+.career-info-box .career-desc {
   width: 40%;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   margin: 0;
+  line-height: 1.6;
+  color: #ded6e5;
 }
+
+.career-desc ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.career-desc li {
+  line-height: 1.5;
+}
+
+.career-tag-pill {
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px 10px;
+  background: rgba(194, 164, 255, 0.1);
+  border: 1px solid rgba(194, 164, 255, 0.3);
+  border-radius: 12px;
+  color: var(--accentColor);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
 .career-info-in {
   display: flex;
   width: 40%;
@@ -173,7 +237,8 @@
     margin-bottom: 70px;
   }
   .career-info-in,
-  .career-info-box p {
+  .career-info-box p,
+  .career-info-box .career-desc {
     width: 100%;
     padding-left: 10%;
     box-sizing: border-box;
@@ -202,7 +267,8 @@
     font-size: 33px;
   }
   .career-info-in,
-  .career-info-box p {
+  .career-info-box p,
+  .career-info-box .career-desc {
     padding-left: 5%;
   }
   .career-section {
@@ -214,3 +280,169 @@
     justify-content: left;
   }
 }
+
+/* --- Upcoming Ventures Section --- */
+.upcoming-ventures-wrapper {
+  width: 100%;
+  max-width: 820px;
+  margin: 60px auto 0 auto;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.upcoming-ventures-badge-row {
+  margin-bottom: 20px;
+}
+
+.upcoming-sub-badge {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--accentColor);
+  background: rgba(194, 164, 255, 0.1);
+  border: 1px solid rgba(194, 164, 255, 0.3);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.upcoming-venture-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.venture-company-name {
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.5px;
+  font-family: "Geist", sans-serif;
+}
+
+.venture-founder-role {
+  font-size: 20px;
+  font-weight: 500;
+  color: #d1cbdc;
+  margin: 0 0 24px 0;
+}
+
+.venture-founder-role span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.venture-display-card {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: #151518;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 34px 38px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s ease;
+}
+
+.venture-display-card:hover {
+  border-color: rgba(194, 164, 255, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7),
+              0 0 30px rgba(194, 164, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.venture-card-icon {
+  position: absolute;
+  top: 30px;
+  right: 32px;
+  color: #ffffff;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.venture-display-card:hover .venture-card-icon {
+  opacity: 1;
+  color: var(--accentColor);
+}
+
+.venture-card-description {
+  font-size: 16px;
+  line-height: 27px;
+  color: #ededf0;
+  font-weight: 300;
+  margin: 0;
+  padding-right: 48px;
+  letter-spacing: 0.2px;
+}
+
+.venture-button-row {
+  margin-top: 30px;
+}
+
+.venture-website-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.venture-website-link:hover {
+  color: #38bdf8;
+  transform: translateX(4px);
+}
+
+.venture-globe {
+  flex-shrink: 0;
+  stroke: #38bdf8;
+  transition: transform 0.3s ease;
+}
+
+.venture-website-link:hover .venture-globe {
+  transform: rotate(25deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .upcoming-ventures-wrapper {
+    margin-top: 40px;
+    padding: 0 4px;
+  }
+  .venture-company-name {
+    font-size: 28px;
+  }
+  .venture-founder-role {
+    font-size: 18px;
+  }
+  .venture-display-card {
+    padding: 24px 22px;
+    border-radius: 18px;
+  }
+  .venture-card-description {
+    font-size: 14.5px;
+    line-height: 24px;
+    padding-right: 28px;
+  }
+  .venture-card-icon {
+    top: 22px;
+    right: 22px;
+  }
+}
+

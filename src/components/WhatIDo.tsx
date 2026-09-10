@@ -87,24 +87,21 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h3>STRATEGY & OPS</h3>
+              <h4>Focus Area</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Scaling ventures from 0 to 1, optimizing business operations, rationalizing product portfolios, managing vendor supply chains, and executing high-retention CRM workflows.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">Business Analysis</div>
+                <div className="what-tags">Market Research</div>
+                <div className="what-tags">Competitor Benchmarking</div>
+                <div className="what-tags">Process Optimization</div>
+                <div className="what-tags">CRM Operations</div>
+                <div className="what-tags">Vendor Management</div>
+                <div className="what-tags">Data-Driven Decisions</div>
+                <div className="what-tags">Shopify</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +125,21 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
+              <h3>INVESTMENT & GROWTH</h3>
+              <h4>Focus Area</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Screening equities via technical and quantitative analysis, evaluating corporate financial statements, identifying risk-adjusted growth opportunities, and running digital campaigns.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Investment Analysis</div>
+                <div className="what-tags">Financial Modeling</div>
+                <div className="what-tags">Technical Analysis</div>
+                <div className="what-tags">Meta Ads Manager</div>
+                <div className="what-tags">Metricool</div>
+                <div className="what-tags">Advanced Excel</div>
+                <div className="what-tags">Generative AI</div>
+                <div className="what-tags">E-Commerce Strategy</div>
               </div>
               <div className="what-arrow"></div>
             </div>
