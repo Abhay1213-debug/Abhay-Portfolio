@@ -132,7 +132,9 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: 50px; line-height: 
 
 /* Story */
 .story { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
-.story .ph { aspect-ratio: 4 / 3.3; }
+.story-pics { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.story-pics .ph { aspect-ratio: 3 / 4; }
+.story-pics .ph:last-child { margin-top: 48px; }
 .story blockquote { font-family: var(--serif); font-size: 36px; line-height: 1.15; margin: 14px 0 22px; }
 .story p { color: var(--tx2); font-size: 16.5px; margin-top: 12px; }
 .arc { display: flex; gap: 10px; margin-top: 26px; flex-wrap: wrap; align-items: center; }
@@ -246,6 +248,7 @@ footer .shell { display: flex; justify-content: space-between; gap: 12px; flex-w
   h2 { font-size: 36px; }
   .story, .proj, .mk, .trek, .sk, .refl { grid-template-columns: 1fr; }
   .story { gap: 28px; }
+  .story-pics .ph:last-child { margin-top: 24px; }
   .story blockquote { font-size: 28px; }
   .proj .ph { aspect-ratio: 16 / 9; min-height: 0; }
   .proj .in { padding: 24px 20px; }
