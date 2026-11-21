@@ -40,7 +40,8 @@
     </nav>
 
     <main id="top">
-      <header class="hero">
+      <header class="hero" id="hero" data-sc-act="flow">
+        <div class="hero-aura" aria-hidden="true" data-sc-parallax="-0.18"></div>
         <div class="shell">
           <div class="hero-grid">
             <div>
@@ -59,9 +60,9 @@
                 <a class="btn" href="#contact">Say hello →</a>
               </div>
             </div>
-            <figure class="ph" data-photo="01-portrait"><span class="slot">Photo 1 · Portrait</span></figure>
+            <figure class="ph portrait" data-photo="01-portrait" data-sc-parallax="0.06"><span class="slot">Photo 1 · Portrait</span></figure>
           </div>
-          <div class="lines edge reveal">
+          <div class="lines edge" data-sc-in>
             <p><span>At work</span>Once I'm on a task, I stay on it until it's done, whatever the hour.</p>
             <p><span>Off work</span>The jolly one in the group, usually planning the next trip.</p>
             <p><span>Why founder's office</span>Cross-functional work, a new problem every day. That's what I enjoy.</p>
@@ -71,7 +72,7 @@
 
       <section id="story">
         <div class="shell">
-          <div class="story reveal">
+          <div class="story" data-sc-in>
             <div class="story-pics">
               <figure class="ph" data-photo="02a-football"><span class="slot">Photo 2a · Football days</span></figure>
               <figure class="ph" data-photo="02b-gold-medal"><span class="slot">Photo 2b · Gold medal (graduation)</span></figure>
@@ -91,12 +92,12 @@
       <section id="projects">
         <div class="shell">
           <div class="sh">
-            <div class="mono ma">Selected projects</div>
+            
             <h2>Problems I've worked on, told the STAR way.</h2>
             <p class="sub">Situation, Task, Action, Result, plus what each one taught me.</p>
           </div>
 
-          <article class="proj edge reveal">
+          <article class="proj edge" id="p-basera" data-sc-tilt="3">
             <figure class="ph" data-photo="03-basera"><span class="slot">Photo 3 · Basera</span></figure>
             <div class="in">
               <div class="top"><span class="mono ma">Dropshipping venture · Co-founder</span><span class="mono">Jul – Sep 2026</span></div>
@@ -120,7 +121,7 @@
             </div>
           </article>
 
-          <article class="proj reveal">
+          <article class="proj" id="p-vantage" data-sc-tilt="3">
             <figure class="ph" data-photo="04-vantage"><span class="slot">Photo 4 · VANTAGE</span></figure>
             <div class="in">
               <div class="top"><span class="mono ma">Case competition · Presenter</span><span class="mono hl">3rd of 237 teams</span></div>
@@ -135,7 +136,7 @@
             </div>
           </article>
 
-          <article class="proj reveal">
+          <article class="proj" id="p-okaya" data-sc-tilt="3">
             <figure class="ph" data-photo="05-okaya"><span class="slot">Photo 5 · Okaya EV</span></figure>
             <div class="in">
               <div class="top"><span class="mono ma">Internship · Okaya EV</span><span class="mono">Jul – Aug 2024</span></div>
@@ -150,7 +151,7 @@
             </div>
           </article>
 
-          <article class="proj reveal">
+          <article class="proj" id="p-solar" data-sc-tilt="3">
             <figure class="ph" data-photo="06-solarcare"><span class="slot">Photo 6 · Solar Care</span></figure>
             <div class="in">
               <div class="top"><span class="mono ma">Own idea · Paused</span><span class="mono">Pre-seed</span></div>
@@ -169,12 +170,12 @@
 
       <section id="journey">
         <div class="shell">
-          <div class="sh"><div class="mono ma">My journey</div><h2>Where I've studied, worked and led.</h2></div>
-          <div class="jr reveal"><div class="mono ma">Post-graduation</div><div><h3>PGP in Technology &amp; Business Management (YLC)</h3><div class="org">Masters' Union, Gurugram</div><ul><li>Co-founded Basera, a dropshipping venture; 3rd of 237 teams at VANTAGE</li><li>Building in Maker's Lab: a robotic caterpillar and a racing drone</li></ul></div><div class="yr">2026 — Present</div></div>
-          <div class="jr reveal"><div class="mono ma">Internships</div><div><h3>Marketing Intern</h3><div class="org">Okaya EV, Delhi</div><ul><li>CRM and after-sales support for 1,000+ EV customers</li><li>Google Business onboarding for 350+ dealers (99% of the network)</li><li>6 Metricool campaigns across 5 platforms; 12% rise in engagement</li></ul></div><div class="yr">Jul — Aug 2024</div></div>
-          <div class="jr reveal"><div class="mono"></div><div><h3>Finance Intern</h3><div class="org">One's Own Financer, Remote</div><ul><li>Screened 100+ stocks with technical analysis; shortlisted 25+ recommendations</li><li>Backtested 20+ strategies; 3 held up (~15%)</li></ul></div><div class="yr">Jul 2024</div></div>
-          <div class="jr reveal"><div class="mono ma">Graduation</div><div><h3>B.Com (Hons) · Gold Medalist</h3><div class="org">Jagannath University, Delhi</div><ul><li>Batch topper among 400+ students, CGPA 8.6/10</li><li>Head Coordinator: 20+ events, 80+ coordinators, 2,000+ participants</li><li>Book donation drive: 800+ books and ~₹1 lakh for ~200 students</li></ul></div><div class="yr">2022 — 2025</div></div>
-          <div class="jr reveal"><div class="mono ma">School</div><div><h3>Elected Head Boy</h3><div class="org">Aditya Birla Public School, Amethi</div><ul><li>CBSE XII 92.8%, X 93.2%; ~15 student-council initiatives reaching 500+ students</li><li>4th of 90+ schools, CBSE Cluster Football Championship</li></ul></div><div class="yr">2020 — 2022</div></div>
+          <div class="sh"><h2>Where I've studied, worked and led.</h2></div>
+          <div class="jr" data-sc-in><div class="mono ma">Post-graduation</div><div><h3>PGP in Technology &amp; Business Management (YLC)</h3><div class="org">Masters' Union, Gurugram</div><ul><li>Co-founded Basera, a dropshipping venture; 3rd of 237 teams at VANTAGE</li><li>Building in Maker's Lab: a robotic caterpillar and a racing drone</li></ul></div><div class="yr">2026 – Present</div></div>
+          <div class="jr" data-sc-in><div class="mono ma">Internships</div><div><h3>Marketing Intern</h3><div class="org">Okaya EV, Delhi</div><ul><li>CRM and after-sales support for 1,000+ EV customers</li><li>Google Business onboarding for 350+ dealers (99% of the network)</li><li>6 Metricool campaigns across 5 platforms; 12% rise in engagement</li></ul></div><div class="yr">Jul – Aug 2024</div></div>
+          <div class="jr" data-sc-in><div class="mono"></div><div><h3>Finance Intern</h3><div class="org">One's Own Financer, Remote</div><ul><li>Screened 100+ stocks with technical analysis; shortlisted 25+ recommendations</li><li>Backtested 20+ strategies; 3 held up (~15%)</li></ul></div><div class="yr">Jul 2024</div></div>
+          <div class="jr" data-sc-in><div class="mono ma">Graduation</div><div><h3>B.Com (Hons) · Gold Medalist</h3><div class="org">Jagannath University, Delhi</div><ul><li>Batch topper among 400+ students, CGPA 8.6/10</li><li>Head Coordinator: 20+ events, 80+ coordinators, 2,000+ participants</li><li>Book donation drive: 800+ books and ~₹1 lakh for ~200 students</li></ul></div><div class="yr">2022 – 2025</div></div>
+          <div class="jr" data-sc-in><div class="mono ma">School</div><div><h3>Elected Head Boy</h3><div class="org">Aditya Birla Public School, Amethi</div><ul><li>CBSE XII 92.8%, X 93.2%; ~15 student-council initiatives reaching 500+ students</li><li>4th of 90+ schools, CBSE Cluster Football Championship</li></ul></div><div class="yr">2020 – 2022</div></div>
         </div>
       </section>
 
@@ -186,21 +187,21 @@
             <p class="sub">I've loved electronics, mechanics and Arduinos for as long as I can remember. Maker's Lab at Masters' Union is where I get to build them again.</p>
           </div>
           <div class="mk">
-            <div class="mkc reveal"><figure class="ph" data-photo="08-caterpillar"><span class="slot">Photo 8 · Robotic caterpillar</span></figure><div class="in"><div class="mono ma">Build 01 · Robotics</div><h3>A robotic caterpillar that walks</h3><p>A small four-step caterpillar. We automated its gait so it walks on its own.</p></div></div>
-            <div class="mkc reveal"><figure class="ph" data-photo="09-drone"><span class="slot">Photo 9 · Drone</span></figure><div class="in"><div class="mono ma">Build 02 · Drones</div><h3>A portable drone, flown and raced</h3><p>Built from scratch, flown well, and raced against other teams' drones.</p></div></div>
+            <div class="mkc" data-sc-in><figure class="ph" data-photo="08-caterpillar"><span class="slot">Photo 8 · Robotic caterpillar</span></figure><div class="in"><div class="mono ma">Build 01 · Robotics</div><h3>A robotic caterpillar that walks</h3><p>A small four-step caterpillar. We automated its gait so it walks on its own.</p></div></div>
+            <div class="mkc" data-sc-in><figure class="ph" data-photo="09-drone"><span class="slot">Photo 9 · Drone</span></figure><div class="in"><div class="mono ma">Build 02 · Drones</div><h3>A portable drone, flown and raced</h3><p>Built from scratch, flown well, and raced against other teams' drones.</p></div></div>
           </div>
-          <div class="next edge reveal"><span class="mono ma">Next build</span> &nbsp; An AI-powered robot.</div>
+          <div class="next edge" data-sc-in><span class="mono ma">Next build</span> &nbsp; An AI-powered robot.</div>
         </div>
       </section>
 
       <section id="off">
         <div class="shell">
           <div class="sh">
-            <div class="mono ma">Off the clock</div>
+            
             <h2>Mountains, mostly.</h2>
             <p class="sub">Most of my favourite days end at a summit. When I'm not trekking, I'm swimming or playing football, basketball or pickleball.</p>
           </div>
-          <div class="gal reveal">
+          <div class="gal" data-sc-in>
             <figure class="ph" data-photo="10-raghupur"><span class="slot">Photo 10 · Raghupur Fort summit</span></figure>
             <figure class="ph" data-photo="11-mcleodganj"><span class="slot">Photo 11 · McLeodganj</span></figure>
             <figure class="ph" data-photo="12-travel"><span class="slot">Photo 12 · Travel</span></figure>
@@ -208,21 +209,55 @@
             <figure class="ph" data-photo="14-friends"><span class="slot">Photo 14 · With friends</span></figure>
           </div>
           <div class="trek">
-            <div class="tk reveal"><b class="aurora">10,882 ft</b><h3>Raghupur Fort: my first trek</h3><p>In peak winter, with a steep stretch along the edge of a drop. The view from the top made every step worth it.</p></div>
-            <div class="tk reveal"><b class="aurora">18 km</b><h3>McLeodganj: my longest day on foot</h3><p>Not the toughest trek, but the longest single-day trek I've done so far.</p></div>
+            <div class="tk" data-sc-in><b class="aurora"><span data-sc-count="0 10,882">10,882</span> ft</b><h3>Raghupur Fort: my first trek</h3><p>In peak winter, with a steep stretch along the edge of a drop. The view from the top made every step worth it.</p></div>
+            <div class="tk" data-sc-in><b class="aurora"><span data-sc-count="0 18">18</span> km</b><h3>McLeodganj: my longest day on foot</h3><p>Not the toughest trek, but the longest single-day trek I've done so far.</p></div>
           </div>
           <div class="places"><span>Shimla</span><span>Manali</span><span>Kasol</span><span>Dharamshala</span><span>McLeodganj</span><span>Lansdowne</span><span>Amritsar</span><span>Vrindavan</span><span>Chitrakoot</span><span>Lonavala</span><span>Pune</span><span>Mulshi</span><span>Aravallis</span><span class="more">+ next one being planned</span></div>
         </div>
       </section>
 
-      <section id="skills">
-        <div class="shell">
-          <div class="sh"><div class="mono ma">Skills</div><h2>An ever-incomplete list.</h2></div>
-          <div class="sk">
-            <div><h3>Strategy &amp; problem solving</h3><p>Problem structuring · Competitive analysis · Benchmarking · Opportunity assessment · Strategic recommendations</p></div>
-            <div><h3>Execution &amp; operations</h3><p>End-to-end ownership · Cross-functional execution · Vendor coordination · SKU management · Stakeholder alignment · Event operations</p></div>
-            <div><h3>Analysis &amp; growth</h3><p>Advanced Excel · Financial statement analysis · Technical analysis · CRM operations · Customer insights · Generative AI</p></div>
+      <section id="skills" class="skills" data-sc-act="pin" data-sc-span="3.6">
+        <div class="skills-stage" data-sc-stage>
+          <div class="skills-canvas"></div>
+          <div class="skills-head">
+            <h2>Every skill, wired to <span class="aurora">where I proved it.</span></h2>
+            <p class="sub">Each skill is linked to the project that proves it.<span class="live-only"> Hover or tap one to see the evidence.</span></p>
           </div>
+          <div class="skills-cluster mono">01 · Strategy</div>
+          <aside class="proof-card" aria-live="polite">
+            <div class="pc-cluster mono"></div>
+            <h3 class="pc-skill"></h3>
+            <p class="pc-proof"></p>
+            <div class="pc-label mono">Proven at</div>
+            <div class="pc-projects"></div>
+          </aside>
+          <ul class="skills-anchors" hidden>
+            <li data-id="basera" data-href="#p-basera">Basera</li>
+            <li data-id="vantage" data-href="#p-vantage">VANTAGE</li>
+            <li data-id="okaya" data-href="#p-okaya">Okaya EV</li>
+            <li data-id="oof" data-href="#journey">One's Own Financer</li>
+            <li data-id="ju" data-href="#journey">JU events</li>
+            <li data-id="solar" data-href="#p-solar">Solar Care</li>
+          </ul>
+          <ul class="skills-list">
+            <li data-cluster="strategy" data-proj="vantage"><b>Problem structuring</b><span>Broke a 7-branch merger case into one clear choice: speed or experience.</span></li>
+            <li data-cluster="strategy" data-proj="vantage basera"><b>Competitive analysis</b><span>Argued against racing Blinkit and Zepto on speed; benchmarked décor rivals for Basera.</span></li>
+            <li data-cluster="strategy" data-proj="basera"><b>Benchmarking</b><span>Set Basera's premium pricing by benchmarking comparable products.</span></li>
+            <li data-cluster="strategy" data-proj="solar"><b>Opportunity assessment</b><span>Mapped a rooftop-solar service and paused it when the economics didn't hold.</span></li>
+            <li data-cluster="strategy" data-proj="vantage"><b>Strategic recommendations</b><span>Presented our recommendation to the judges: 3rd of 237 teams.</span></li>
+            <li data-cluster="execution" data-proj="basera"><b>End-to-end ownership</b><span>Owned strategy, operations and brand presence for three months.</span></li>
+            <li data-cluster="execution" data-proj="ju okaya"><b>Cross-functional execution</b><span>20+ events with 80+ coordinators; dealer onboarding alongside the original sales owners.</span></li>
+            <li data-cluster="execution" data-proj="okaya"><b>Stakeholder management</b><span>Won back dealer trust through the people who first signed them: 350+ onboarded.</span></li>
+            <li data-cluster="execution" data-proj="basera"><b>Vendor coordination</b><span>Coordinated 3 vendors on fulfilment across 8 SKUs.</span></li>
+            <li data-cluster="execution" data-proj="basera"><b>SKU management</b><span>Weekly reviews cut 35 SKUs to the 8 that sold.</span></li>
+            <li data-cluster="execution" data-proj="basera"><b>Conflict resolution</b><span>Got a stalled 9-person team working again after a 3-day standoff.</span></li>
+            <li data-cluster="analysis" data-proj="okaya"><b>Root cause analysis</b><span>Found the real blocker was trust, not process.</span></li>
+            <li data-cluster="analysis" data-proj="oof"><b>Financial statement analysis</b><span>Reviewed the statements of 15+ companies for risk and growth.</span></li>
+            <li data-cluster="analysis" data-proj="oof"><b>Technical analysis</b><span>Screened 100+ stocks; only 3 of 20+ backtested strategies held up.</span></li>
+            <li data-cluster="analysis" data-proj="basera okaya"><b>Customer insights</b><span>Buyer feedback drove the SKU cut; feedback analysis lifted engagement 12%.</span></li>
+            <li data-cluster="analysis" data-proj="basera"><b>Data-driven decisions</b><span>Every SKU call at Basera came from the weekly numbers.</span></li>
+            <li data-cluster="analysis" data-proj="basera"><b>Generative AI</b><span>Made Basera's daily product visuals and creatives with GenAI.</span></li>
+          </ul>
         </div>
       </section>
 
