@@ -94,14 +94,13 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Business Analysis</div>
-                <div className="what-tags">Market Research</div>
-                <div className="what-tags">Competitor Benchmarking</div>
-                <div className="what-tags">Process Optimization</div>
-                <div className="what-tags">CRM Operations</div>
+                <div className="what-tags">Business Strategy</div>
+                <div className="what-tags">Business Development</div>
+                <div className="what-tags">Operations Management</div>
                 <div className="what-tags">Vendor Management</div>
-                <div className="what-tags">Data-Driven Decisions</div>
-                <div className="what-tags">Shopify</div>
+                <div className="what-tags">CRM Operations</div>
+                <div className="what-tags">Customer Engagement</div>
+                <div className="what-tags">Data-Driven Decision Making</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -132,14 +131,13 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
+                <div className="what-tags">Financial Analysis</div>
                 <div className="what-tags">Investment Analysis</div>
-                <div className="what-tags">Financial Modeling</div>
                 <div className="what-tags">Technical Analysis</div>
-                <div className="what-tags">Meta Ads Manager</div>
-                <div className="what-tags">Metricool</div>
+                <div className="what-tags">Stock Market Analysis</div>
                 <div className="what-tags">Advanced Excel</div>
+                <div className="what-tags">Metricool</div>
                 <div className="what-tags">Generative AI</div>
-                <div className="what-tags">E-Commerce Strategy</div>
               </div>
               <div className="what-arrow"></div>
             </div>

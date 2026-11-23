@@ -11,18 +11,72 @@ import {
   RapierRigidBody,
 } from "@react-three/rapier";
 
-const textureLoader = new THREE.TextureLoader();
-const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+// Skills from the one-page résumé, rendered onto the spheres as text textures.
+const skills = [
+  "Business Strategy",
+  "Business Development",
+  "Operations Management",
+  "Vendor Management",
+  "CRM Operations",
+  "Customer Engagement",
+  "Financial Analysis",
+  "Investment Analysis",
+  "Data-Driven Decision Making",
+  "Advanced Excel",
+  "Technical Analysis",
+  "Stock Market Analysis",
+  "Metricool",
+  "Generative AI",
 ];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+const palette = ["#2a1452", "#3b1d6e", "#1d1240", "#4a2380"];
+
+function wrap(ctx: CanvasRenderingContext2D, text: string, max: number) {
+  const words = text.split(" ");
+  const lines: string[] = [];
+  let line = "";
+  words.forEach((w) => {
+    const test = line ? line + " " + w : w;
+    if (ctx.measureText(test).width > max && line) {
+      lines.push(line);
+      line = w;
+    } else line = test;
+  });
+  if (line) lines.push(line);
+  return lines;
+}
+
+function skillTexture(label: string, i: number) {
+  const c = document.createElement("canvas");
+  c.width = 1024;
+  c.height = 512;
+  const ctx = c.getContext("2d")!;
+  const g = ctx.createLinearGradient(0, 0, 1024, 512);
+  g.addColorStop(0, palette[i % palette.length]);
+  g.addColorStop(1, "#0b0614");
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, 1024, 512);
+  ctx.fillStyle = "#f2c0ff";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  // Draw the label twice so it reads from either side of the sphere.
+  [256, 768].forEach((cx) => {
+    let size = 64;
+    ctx.font = `600 ${size}px Inter, system-ui, sans-serif`;
+    let lines = wrap(ctx, label, 300);
+    while ((lines.length > 3 || lines.some((l) => ctx.measureText(l).width > 320)) && size > 30) {
+      size -= 4;
+      ctx.font = `600 ${size}px Inter, system-ui, sans-serif`;
+      lines = wrap(ctx, label, 300);
+    }
+    const lh = size * 1.1;
+    lines.forEach((l, k) => ctx.fillText(l, cx, 256 + (k - (lines.length - 1) / 2) * lh));
+  });
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.anisotropy = 4;
+  return t;
+}
+const textures = skills.map((s, i) => skillTexture(s, i));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
@@ -168,7 +222,7 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2> My Skillset</h2>
 
       <Canvas
         shadows
